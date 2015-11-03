@@ -1,18 +1,15 @@
 require 'sinatra'
 
-get '/' do "main Menu"
-	
-end
-
 get '/' do
-	"Hello World"
-end
-
-get '/' do 
+	@crm_app_name = "My CRM"
 	erb :index
 end
 
-get '/' do
-	@crm_app_name = "My CRM"
-	erb : index
+get '/contacts' do
+	@crm_app_name = "My contact"
+	erb :contact
+end
+
+get '/contacts/new' do
+
 end
