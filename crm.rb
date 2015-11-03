@@ -12,5 +12,8 @@ get '/contacts' do
 end
 
 get '/contacts/new' do
-
+	Contact.create("Yehuda", "Katz", "yhuda@example.com", "Developer")
+	Contact.create("Mark", "Zuckerberg", "mark@facebook.com", "CEO")
+	Contact.create("Sergey", "Brin", "sergey@google.com", "Co-Founder")
+	erb :contacts
 end
